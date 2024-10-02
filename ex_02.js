@@ -1,5 +1,5 @@
 // Write your code here...
-function caseInsensitiveCompare(housingtofind, housinglist) {
+function majmin(housingtofind, housinglist) {
     return  housingtofind.toLowerCase() === housinglist.toLowerCase();
 }
 
