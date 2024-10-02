@@ -1,22 +1,25 @@
 // Write your code here...
-function findHousing(housingToFind, housingList) {
-    
-    let ind = 0;
-
-    while (ind < housingList.length) {
-        	if (housingList[ind] === housingToFind)
-        
-        {
-            	return [ind, housingList[ind]];
-        }
-        ind++;
-    }
-
-   		return [-1, null];
+function caseInsensitiveCompare(housingtofind, housinglist) {
+    return  housingtofind.toLowerCase() === housinglist.toLowerCase();
 }
 
-//Use console.log to debug you're code ! It is very useful
-console.log("I'm debugging")
+function findHousing(housingtofind, housinglist) {
+    let ind = 0;
+
+    while (ind < housinglist.length) {
+    		
+        if (housingtofind.toLowerCase() === housinglist[ind].toLowerCase()) {
+            return [ind, housinglist[ind]]
+     
+        }
+      ind+=1;    
+        
+    }
+    return null;
+}
+
+
 
 //Some code to display your function output: (you must modify it but /!\ do not deliver it /!\ ). Only deliver your function
-displayResult([9, "House"])
+
+displayResult(findHousing("hut", ["Flat", "House", "Hut", "House", "Igloo"]))
